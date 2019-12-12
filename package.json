@@ -1,0 +1,33 @@
+{
+  "name": "deep-getter",
+  "version": "1.1.2",
+  "description": "get all the way through your variable without breaking your app",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run lint && npm run test && npm run docs",
+    "docs": "npx jsdoc2md *.js src/*.js > ./docs/README.md",
+    "lint": "eslint --ext .js ./",
+    "fix": "eslint --ext .js ./ --fix",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatoCinza/deep-getter.git"
+  },
+  "author": "Pato Cinza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PatoCinza/deep-getter/issues"
+  },
+  "homepage": "https://github.com/PatoCinza/deep-getter#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.0.0",
+    "jsdoc-to-markdown": "^5.0.3"
+  }
+}
