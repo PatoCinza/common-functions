@@ -1,9 +1,9 @@
-import compose from './src/compose'
-import getUniqueValues from './src/get-unique-values'
-import reverseArray from './src/reverse-array'
-import validateCpf from './src/validate-cpf'
+const compose = require('./src/compose.js')
+const getUniqueValues = require('./src/get-unique-values.js')
+const reverseArray = require('./src/reverse-array.js')
+const validateCpf = require('./src/validate-cpf.js')
 
-export {
+module.exports = {
   compose,
   getUniqueValues,
   reverseArray,

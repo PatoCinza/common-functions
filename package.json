@@ -13,18 +13,10 @@
     "docs": "npx jsdoc2md *.js src/*.js > ./docs/README.md",
     "lint": "eslint --ext .js ./",
     "fix": "eslint --ext .js ./ --fix",
-    "test": "echo ok"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PatoCinza/deep-getter.git"
+    "test": "jest --coverage"
   },
   "author": "Pato Cinza",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PatoCinza/deep-getter/issues"
-  },
-  "homepage": "https://github.com/PatoCinza/deep-getter#readme",
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
