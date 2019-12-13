@@ -2,7 +2,7 @@
   "name": "common-functions",
   "version": "1.0.0",
   "description": "Blueticket common functions",
-  "main": "dist/common-functions.cjs.js",
+  "main": "dist/common-functions.umd.js",
   "module": "dist/common-functions.esm.js",
   "browser": "dist/common-functions.umd.js",
   "files": [
