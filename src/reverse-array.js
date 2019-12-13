@@ -6,4 +6,4 @@
  */
 const reverseArray = array => array.map((x, idx) => array[array.length - 1 - idx])
 
-export default reverseArray
+module.exports = reverseArray

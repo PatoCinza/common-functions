@@ -1,4 +1,4 @@
-import getUniqueValues from './get-unique-values'
+const getUniqueValues = require('./get-unique-values.js')
 
 /**
  * Sums CPF digits based on specification rules
@@ -43,4 +43,4 @@ const validateCpf = cpf => {
   return [firstDigit, secondDigit].join('') === cpfArray.filter((_, i) => i >= 9).join('')
 }
 
-export default validateCpf
+module.exports = validateCpf

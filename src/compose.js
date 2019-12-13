@@ -7,4 +7,4 @@
  */
 const compose = (...fns) => fns.reduce((f, g) => (...x) => f(g(...x)))
 
-export default compose
+module.exports = compose

@@ -6,4 +6,4 @@
  */
 const getUniqueValues = array => array.filter((item, index, array) => array.indexOf(item) === index)
 
-export default getUniqueValues
+module.exports = getUniqueValues
