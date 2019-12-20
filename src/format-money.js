@@ -21,7 +21,10 @@ const fillThousands = (amount, separator) =>
  */
 const formatMoney = function (amount, fillDecimal = true, currencySymbol = 'R$', thousandSeparator = '.', decimalSeparator = ',') {
   const decimalValue = fillDecimal ? '00' : String(amount).slice(-2)
-  const separatedAmount = fillThousands(String(amount).replace(new RegExp(decimalValue + '$'), ''), thousandSeparator)
+  const integerAmount = String(amount).slice(-2) === '00' && fillDecimal
+    ? String(amount)
+    : String(amount).replace(new RegExp(decimalValue + '$'), '')
+  const separatedAmount = fillThousands(integerAmount, thousandSeparator)
   return `${currencySymbol} ${separatedAmount}${decimalSeparator}${decimalValue}`
 }
 

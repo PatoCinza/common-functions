@@ -166,7 +166,8 @@
     var thousandSeparator = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '.';
     var decimalSeparator = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : ',';
     var decimalValue = fillDecimal ? '00' : String(amount).slice(-2);
-    var separatedAmount = fillThousands(String(amount).replace(new RegExp(decimalValue + '$'), ''), thousandSeparator);
+    var integerAmount = String(amount).slice(-2) === '00' && fillDecimal ? String(amount) : String(amount).replace(new RegExp(decimalValue + '$'), '');
+    var separatedAmount = fillThousands(integerAmount, thousandSeparator);
     return "".concat(currencySymbol, " ").concat(separatedAmount).concat(decimalSeparator).concat(decimalValue);
   };
 
