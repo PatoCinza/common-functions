@@ -24,4 +24,4 @@ Just like that, it's easy
 
 ## Contributing
 
-To contribute, just create your `function.js` inside the `src/` folder, solve the problem you want to solve, write the tests for it inside `test/` and run `npm run build`, it will generate a new build file, as well as updating your documentation, this should in the future be done as a CI step and precommit step
+To contribute, just create your `function.js` inside the `src/` folder, solve the problem you want to solve, export your function and import it in the `index.js` file, write the tests for it inside `test/` and run `npm run build`, it will generate a new build file, as well as updating your documentation, this should in the future be done as a CI step and precommit step
