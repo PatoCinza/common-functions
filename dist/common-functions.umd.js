@@ -137,19 +137,57 @@
 
   var validateCpf_1 = validateCpf;
 
+  var thousandDelimiter = new RegExp(/([\w]+)(?<!\.)(\d{3})(?:$)?(\.?[\w]*)/g);
+  /**
+   * Given a amount, fills the thousands delimiters
+   * @private
+   * @param { String } amount amount to separate
+   * @param { String } separator character to append
+   * @returns { String } amount with thousands separated
+   */
+
+  var fillThousands = function fillThousands(amount, separator) {
+    return thousandDelimiter.test(amount) ? fillThousands(amount.replace(thousandDelimiter, "$1".concat(separator, "$2$3")), separator) : amount;
+  };
+  /**
+   * Given an amount of money as a `Number`, formats it and returns as a `String`
+   * @param { Number } amount money to format with no punctuation
+   * @param { Boolean } fillDecimal If the function should fill the cents
+   * @param { String } currencySymbol currencySymbol
+   * @param { String } thousandSeparator thousandSeparator
+   * @param { String } decimalSeparator decimalSeparator
+   * @returns { String } money formatted
+   */
+
+
+  var formatMoney = function formatMoney(amount) {
+    var fillDecimal = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    var currencySymbol = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'R$';
+    var thousandSeparator = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '.';
+    var decimalSeparator = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : ',';
+    var decimalValue = fillDecimal ? '00' : String(amount).slice(-2);
+    var separatedAmount = fillThousands(String(amount).replace(new RegExp(decimalValue + '$'), ''), thousandSeparator);
+    return "".concat(currencySymbol, " ").concat(separatedAmount).concat(decimalSeparator).concat(decimalValue);
+  };
+
+  var formatMoney_1 = formatMoney;
+
   var commonFunctions = {
     compose: compose_1,
     getUniqueValues: getUniqueValues_1,
     reverseArray: reverseArray_1,
-    validateCpf: validateCpf_1
+    validateCpf: validateCpf_1,
+    formatMoney: formatMoney_1
   };
   var commonFunctions_1 = commonFunctions.compose;
   var commonFunctions_2 = commonFunctions.getUniqueValues;
   var commonFunctions_3 = commonFunctions.reverseArray;
   var commonFunctions_4 = commonFunctions.validateCpf;
+  var commonFunctions_5 = commonFunctions.formatMoney;
 
   exports.compose = commonFunctions_1;
   exports.default = commonFunctions;
+  exports.formatMoney = commonFunctions_5;
   exports.getUniqueValues = commonFunctions_2;
   exports.reverseArray = commonFunctions_3;
   exports.validateCpf = commonFunctions_4;
