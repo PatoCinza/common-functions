@@ -6,9 +6,12 @@ var reverseArray = require('./src/reverse-array.js');
 
 var validateCpf = require('./src/validate-cpf.js');
 
+var formatMoney = require('./src/format-money');
+
 module.exports = {
   compose: compose,
   getUniqueValues: getUniqueValues,
   reverseArray: reverseArray,
-  validateCpf: validateCpf
+  validateCpf: validateCpf,
+  formatMoney: formatMoney
 };

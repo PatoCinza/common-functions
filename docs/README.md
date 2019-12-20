@@ -4,6 +4,9 @@
 <dt><a href="#compose">compose(...fns)</a> ⇒ <code>function</code></dt>
 <dd><p>Compose functions as any functional stuff f: x -&gt; y</p>
 </dd>
+<dt><a href="#formatMoney">formatMoney(amount, fillDecimal, currencySymbol, thousandSeparator, decimalSeparator)</a> ⇒ <code>String</code></dt>
+<dd><p>Given an amount of money as a <code>Number</code>, formats it and returns as a <code>String</code></p>
+</dd>
 <dt><a href="#getUniqueValues">getUniqueValues(array)</a> ⇒ <code>Array</code></dt>
 <dd><p>Given an array, remove all of it&#39;s duplicate values without changing the original</p>
 </dd>
@@ -26,6 +29,22 @@ Compose functions as any functional stuff f: x -> y
 | Param | Type | Description |
 | --- | --- | --- |
 | ...fns | <code>function</code> | functions to compose |
+
+<a name="formatMoney"></a>
+
+## formatMoney(amount, fillDecimal, currencySymbol, thousandSeparator, decimalSeparator) ⇒ <code>String</code>
+Given an amount of money as a `Number`, formats it and returns as a `String`
+
+**Kind**: global function  
+**Returns**: <code>String</code> - money formatted  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| amount | <code>Number</code> |  | money to format with no punctuation |
+| fillDecimal | <code>Boolean</code> | <code>true</code> | If the function should fill the cents |
+| currencySymbol | <code>String</code> | <code>R$</code> | currencySymbol |
+| thousandSeparator | <code>String</code> | <code>.</code> | thousandSeparator |
+| decimalSeparator | <code>String</code> | <code>,</code> | decimalSeparator |
 
 <a name="getUniqueValues"></a>
 
