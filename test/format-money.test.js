@@ -2,7 +2,7 @@ const { formatMoney } = require('../index.js')
 
 describe('Compose testing', () => {
   it('Should format little numbers', () => {
-    expect(formatMoney(123)).toEqual('R$ 123,00')
+    expect(formatMoney(100)).toEqual('R$ 100,00')
   })
 
   it('Should format mid-sized numbers', () => {
