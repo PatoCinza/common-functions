@@ -173,23 +173,37 @@
 
   var formatMoney_1 = formatMoney;
 
+  /**
+   * Returns the passed param
+   * @param { * } x param
+   * @returns { * } x
+   */
+  var identity = function identity(x) {
+    return x;
+  };
+
+  var identity_1 = identity;
+
   var commonFunctions = {
     compose: compose_1,
     getUniqueValues: getUniqueValues_1,
     reverseArray: reverseArray_1,
     validateCpf: validateCpf_1,
-    formatMoney: formatMoney_1
+    formatMoney: formatMoney_1,
+    identity: identity_1
   };
   var commonFunctions_1 = commonFunctions.compose;
   var commonFunctions_2 = commonFunctions.getUniqueValues;
   var commonFunctions_3 = commonFunctions.reverseArray;
   var commonFunctions_4 = commonFunctions.validateCpf;
   var commonFunctions_5 = commonFunctions.formatMoney;
+  var commonFunctions_6 = commonFunctions.identity;
 
   exports.compose = commonFunctions_1;
   exports.default = commonFunctions;
   exports.formatMoney = commonFunctions_5;
   exports.getUniqueValues = commonFunctions_2;
+  exports.identity = commonFunctions_6;
   exports.reverseArray = commonFunctions_3;
   exports.validateCpf = commonFunctions_4;
 

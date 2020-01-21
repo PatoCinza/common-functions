@@ -10,6 +10,9 @@
 <dt><a href="#getUniqueValues">getUniqueValues(array)</a> ⇒ <code>Array</code></dt>
 <dd><p>Given an array, remove all of it&#39;s duplicate values without changing the original</p>
 </dd>
+<dt><a href="#identity">identity(x)</a> ⇒ <code>*</code></dt>
+<dd><p>Returns the passed param</p>
+</dd>
 <dt><a href="#reverseArray">reverseArray(array)</a> ⇒ <code>Array</code></dt>
 <dd><p>Given an array, return it inverted without changing it</p>
 </dd>
@@ -57,6 +60,18 @@ Given an array, remove all of it's duplicate values without changing the origina
 | Param | Type | Description |
 | --- | --- | --- |
 | array | <code>Array</code> | Original array |
+
+<a name="identity"></a>
+
+## identity(x) ⇒ <code>\*</code>
+Returns the passed param
+
+**Kind**: global function  
+**Returns**: <code>\*</code> - x  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| x | <code>\*</code> | param |
 
 <a name="reverseArray"></a>
 
